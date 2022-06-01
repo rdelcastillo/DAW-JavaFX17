@@ -1,14 +1,15 @@
 package org.iesgrancapitan.PROGR.openjfx;
 
-import java.util.Scanner;
-
 /**
  * Ejemplo de GUI usando JavaFX.
  * 
  * Mostramos una ventana con título.
  * 
+ * @author Rafael del Castillo Gomariz
+ * 
  */
 
+import java.util.Scanner;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

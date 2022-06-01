@@ -1,9 +1,12 @@
 package org.iesgrancapitan.PROGR.openjfx;
 
 /**
- * Usamos un fichero FXML que tiene el diseño de la GUI.
- *  
- * @author Rafael del Castillo
+ * Imprimimos la tabla de multiplicar de un número dado.
+ * 
+ * Usamos un FXML con su controlador.
+ * 
+ * @author Rafael del Castillo Gomariz
+ * 
  */
 
 import java.io.IOException;
@@ -13,12 +16,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Ej03HelloWorld extends Application {
+public class Ej07MultiplicationTable extends Application {
 
   @Override
   public void start(Stage primaryStage) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("view/Ej03HelloWorld.fxml"));
-    primaryStage.setTitle("Hola Mundo!!!");
+    primaryStage.setTitle("Tabla de multiplicar");
+    Parent root = FXMLLoader.load(getClass().getResource("view/Ej07MultiplicationTable.fxml"));
     primaryStage.setScene(new Scene(root));
     primaryStage.show();
   }

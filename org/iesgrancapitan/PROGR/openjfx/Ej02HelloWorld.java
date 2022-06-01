@@ -5,6 +5,8 @@ package org.iesgrancapitan.PROGR.openjfx;
  * 
  * Mostramos una ventana con título y contenido en su interior.
  * 
+ * @author Rafael del Castillo Gomariz
+ * 
  */
 
 import javafx.application.Application;

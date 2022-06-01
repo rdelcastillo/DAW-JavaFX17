@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 
 import javafx.scene.control.TextField;
 
-public class FactorialController {
+public class Ej06FactorialController {
   @FXML
   private TextField number;
   @FXML
