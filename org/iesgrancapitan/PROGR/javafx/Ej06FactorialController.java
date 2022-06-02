@@ -1,4 +1,4 @@
-package org.iesgrancapitan.PROGR.openjfx.view;
+package org.iesgrancapitan.PROGR.javafx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

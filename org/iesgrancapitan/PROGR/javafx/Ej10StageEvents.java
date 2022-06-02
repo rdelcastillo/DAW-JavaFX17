@@ -1,4 +1,4 @@
-package org.iesgrancapitan.PROGR.openjfx;
+package org.iesgrancapitan.PROGR.javafx;
 
 /**
  * Ejemplo de manejo de eventos emitidos desde un stage.

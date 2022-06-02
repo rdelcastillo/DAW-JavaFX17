@@ -20,7 +20,7 @@
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/ISS041E049097.jpg" />
+            <Image url="@../img/ISS041E049097.jpg" />
          </image>
       </ImageView>
       <AnchorPane>

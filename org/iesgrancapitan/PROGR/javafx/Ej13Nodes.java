@@ -1,4 +1,4 @@
-package org.iesgrancapitan.PROGR.openjfx;
+package org.iesgrancapitan.PROGR.javafx;
 
 /**
  * Ejemplo de cómo acceder a las propiedades de los nodos.
@@ -26,8 +26,11 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class Ej13Nodes extends Application {
-  
-  TextArea data = new TextArea();
+
+  TextArea data =
+      new TextArea("Prueba a hacer lo siguiente:\n" + "\t- Click con el ratón en Caja 1 ó Caja 2.\n"
+          + "\t- Escribir el primer campo de texto con binding\n"
+          + "\t- Cambiar el tamaño el ancho de esta ventana.\n\n");
 
   @Override
   public void start(Stage primaryStage) {
@@ -37,18 +40,18 @@ public class Ej13Nodes extends Application {
   }
 
   private Scene newScene() {
-    
+
     // Capturamos el click dentro de las cajas de texto
     TextArea textArea1 = new TextArea("Caja 1\n");
-    textArea1.setOnMouseClicked(event -> ponDatos(event));
+    textArea1.setOnMouseClicked(event -> putData(event));
     textArea1.setId("Caja 1");
     TextArea textArea2 = new TextArea("Caja 2\n");
-    textArea2.setOnMouseClicked(event -> ponDatos(event));
+    textArea2.setOnMouseClicked(event -> putData(event));
     textArea2.setId("Caja 2");
-    
-    Border border = new Border(new BorderStroke(Color.BLACK, 
-        BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT));
-    
+
+    Border border = new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID,
+        CornerRadii.EMPTY, BorderWidths.DEFAULT));
+
     HBox hBox1 = new HBox(10, textArea1, textArea2);
     hBox1.setPadding(new Insets(25));
     hBox1.setBorder(border);
@@ -57,31 +60,33 @@ public class Ej13Nodes extends Application {
     TextField textField1 = new TextField();
     TextField textField2 = new TextField();
     textField2.textProperty().bind(textField1.textProperty());
-    textField1.textProperty().addListener((prop, oldVal, newVal) -> 
-      data.appendText("Caja de texto cambiada: '" + oldVal + "' a '" + newVal + "'\n"));
+    textField1.textProperty().addListener((prop, oldVal, newVal) -> data
+        .appendText("Caja de texto cambiada: '" + oldVal + "' a '" + newVal + "'\n"));
 
     Label label = new Label("Cajas de texto con binding");
-    
+
     HBox hBox2 = new HBox(100, label, textField1, textField2);
     hBox2.setAlignment(Pos.CENTER);
-    
+
     VBox vBox = new VBox(20, hBox1, hBox2, data);
     vBox.setPadding(new Insets(50));
-    
+
     // Controlamos los cambios del ancho en el layout
-    vBox.widthProperty().addListener((prop, oldVal, newVal) -> 
-      System.out.println("widthProperty cambiada: " + oldVal + " a " + newVal));
-    
+    vBox.widthProperty().addListener((prop, oldVal, newVal) -> System.out
+        .println("widthProperty cambiada: " + oldVal + " a " + newVal));
+
     return new Scene(vBox);
   }
 
-  private void ponDatos(MouseEvent event) {
+  private void putData(MouseEvent event) {
     TextArea textArea = (TextArea) event.getSource();
     textArea.appendText("Realizado click.\n");
-    
+
     data.appendText("Click en TextArea con id " + textArea.getId() + "\n");
-    data.appendText("Posición del ratón: [" + event.getX() + ", " + event.getY() + "]\n");
-    data.appendText("Posición en Layout: [" + textArea.getLayoutX() + ", " + textArea.getLayoutY() + "]\n");
+    data.appendText("Posición del ratón:\n");
+    data.appendText("\t- en caja de texto: [" + event.getX() + ", " + event.getY() + "]\n");
+    data.appendText("\t- en escena: [" + event.getSceneX() + ", " + event.getSceneY() + "]\n");
+    data.appendText("\t- en pantalla: [" + event.getScreenX() + ", " + event.getScreenY() + "]\n");
     data.appendText("-----\n");
   }
 

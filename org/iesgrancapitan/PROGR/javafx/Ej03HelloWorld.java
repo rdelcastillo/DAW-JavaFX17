@@ -1,4 +1,4 @@
-package org.iesgrancapitan.PROGR.openjfx;
+package org.iesgrancapitan.PROGR.javafx;
 
 /**
  * Usamos un fichero FXML que tiene el diseño de la GUI.
@@ -17,7 +17,7 @@ public class Ej03HelloWorld extends Application {
 
   @Override
   public void start(Stage primaryStage) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("view/Ej03HelloWorld.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("fxml/Ej03HelloWorld.fxml"));
     primaryStage.setTitle("Hola Mundo!!!");
     primaryStage.setScene(new Scene(root));
     primaryStage.show();

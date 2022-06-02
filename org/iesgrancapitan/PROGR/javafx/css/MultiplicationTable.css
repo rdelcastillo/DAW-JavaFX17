@@ -1,0 +1,18 @@
+.label, .text-field, .button {
+	-fx-font: 16px "System";
+}
+
+.text-area {
+  -fx-font: 18px "FreeSans";
+}
+
+.root {
+	-fx-padding: 20,10,20,10;
+	-fx-spacing: 15;
+	-fx-alignment: CENTER;
+}
+
+#hbox {
+  -fx-spacing: 15;
+  -fx-alignment: CENTER;
+}

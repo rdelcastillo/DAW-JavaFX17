@@ -1,8 +1,8 @@
-package org.iesgrancapitan.PROGR.openjfx;
+package org.iesgrancapitan.PROGR.javafx;
 
 /**
  * Cálculo del factorial de un número usando un FXML con su controlador.
- * 
+ *  
  * @author Rafael del Castillo Gomariz
  */
 
@@ -18,7 +18,8 @@ public class Ej06Factorial extends Application {
   @Override
   public void start(Stage primaryStage) throws IOException {
     primaryStage.setTitle("Cálculo del factorial");
-    Parent root = FXMLLoader.load(getClass().getResource("view/Ej06Factorial.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("fxml/Ej06Factorial.fxml"));
+    // Parent root = FXMLLoader.load(getClass().getResource("fxml/Ej06RawFactorial.fxml"));
     primaryStage.setScene(new Scene(root));
     primaryStage.show();
   }

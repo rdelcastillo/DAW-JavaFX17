@@ -1,4 +1,4 @@
-package org.iesgrancapitan.PROGR.openjfx;
+package org.iesgrancapitan.PROGR.javafx;
 
 /**
  * Ejemplo de cambios en el cursor gráfico del ratón desde una escena.
