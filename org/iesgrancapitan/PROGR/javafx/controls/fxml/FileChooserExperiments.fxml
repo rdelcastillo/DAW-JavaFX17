@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="org.iesgrancapitan.PROGR.javafx.controls.FileChooserExperimentsController">
+   <children>
+      <Label text="Nombre y ruta del archivo" />
+      <TextField fx:id="fichero" editable="false" />
+      <TextArea fx:id="visor" prefHeight="200.0" prefWidth="200.0" />
+      <Button mnemonicParsing="false" onAction="#escogerFichero" text="Buscar" />
+   </children>
+</VBox>

@@ -1,0 +1,29 @@
+#fuente-courier {
+	-fx-font: 50px "Courier";
+}
+
+#error {
+  -fx-text-fill: red;
+}
+
+.label, .text-field, .button, .progress-bar {
+	-fx-font: 24px "Arial";
+}
+
+.text-area {
+  -fx-font: 22px "Gothic";
+}
+
+.text, .slider {
+  -fx-font: 25px "Arial";
+}
+
+.check-box, .color-picker, .combo-box, .date-picker {
+  -fx-font: 24px "Courier";
+}
+
+.root {
+	-fx-padding: 20;
+	-fx-spacing: 10;
+	-fx-alignment: CENTER;
+}

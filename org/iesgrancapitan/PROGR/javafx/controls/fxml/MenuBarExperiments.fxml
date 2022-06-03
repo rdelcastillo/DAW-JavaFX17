@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" style="-fx-alignment: TOP_CENTER; -fx-padding: 0;" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesgrancapitan.PROGR.javafx.controls.MenuBarExperimentsController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu 1">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Item 1" />
+                  <MenuItem mnemonicParsing="false" text="Item 2" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Item 3" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onHidden="#menu2OnHidden" onHiding="#menu2OnHiding" onShowing="#menu2OnShowing" onShown="#menu2OnShown" text="Menu 2">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Item 1">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon_calendar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="Item 2">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon_mobile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Menu 3">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#menu3Item1" text="Item 1" />
+                  <Menu mnemonicParsing="false" text="Submenu">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Item submenu 1" />
+                        <MenuItem mnemonicParsing="false" text="Item submenu 2" />
+                    </items>
+                  </Menu>
+            </items>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon_hand.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Menu 4">
+               <items>
+                  <CheckMenuItem mnemonicParsing="false" text="Check item1" />
+                  <CheckMenuItem mnemonicParsing="false" text="Check item2" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Menu 5">
+               <items>
+                  <RadioMenuItem mnemonicParsing="false" text="Choice 1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" selected="true" text="Choice 2" toggleGroup="$toggleGroup" />
+                  <RadioMenuItem mnemonicParsing="false" text="Choice 3" toggleGroup="$toggleGroup" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Menu 6">
+               <items>
+                  <CustomMenuItem mnemonicParsing="false" text="Unspecified Action">
+                     <content>
+                        <Slider value="50.0" />
+                     </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                     <content>
+                        <Button mnemonicParsing="false" text="Custom Menu Item Button" />
+                     </content>
+                  </CustomMenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="_Options">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Option 1" />
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</VBox>

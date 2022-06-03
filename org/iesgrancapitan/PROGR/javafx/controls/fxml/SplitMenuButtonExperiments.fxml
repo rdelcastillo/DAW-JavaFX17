@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesgrancapitan.PROGR.javafx.controls.SplitMenuButtonsExperimentsController">
+   <children>
+      <SplitMenuButton mnemonicParsing="false" onAction="#fireSplitMenuButton" text="Click here!">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+            <MenuItem mnemonicParsing="false" onAction="#fireMenuItem3" text="Action 3" />
+        </items>
+      </SplitMenuButton>
+   </children>
+</HBox>
