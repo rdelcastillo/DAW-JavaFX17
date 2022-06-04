@@ -27,7 +27,7 @@ import javafx.stage.Stage;
 
 public class Ej13Nodes extends Application {
 
-  TextArea data =
+  private TextArea data =
       new TextArea("Prueba a hacer lo siguiente:\n" + "\t- Click con el ratón en Caja 1 ó Caja 2.\n"
           + "\t- Escribir el primer campo de texto con binding\n"
           + "\t- Cambiar el tamaño el ancho de esta ventana.\n\n");

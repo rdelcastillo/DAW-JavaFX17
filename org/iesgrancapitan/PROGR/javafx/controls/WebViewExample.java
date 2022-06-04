@@ -49,7 +49,7 @@ public class WebViewExample extends Application {
         url = entry.getText();
         if(!url.startsWith("http"))
         {
-          url = "http://" + url;
+          url = "https://" + url;
         }
         webView.getEngine().load(url);
         entry.setText(webView.getEngine().getLocation());
@@ -78,9 +78,9 @@ public class WebViewExample extends Application {
       entry.setText(webView.getEngine().getLocation());
     });
     
-    HBox botones = new HBox(20, prev, zoom1, zoom2, next);
-    botones.setAlignment(Pos.CENTER);
-    root.getChildren().add(botones);
+    HBox buttons = new HBox(20, prev, zoom1, zoom2, next);
+    buttons.setAlignment(Pos.CENTER);
+    root.getChildren().add(buttons);
     
     // Escena y escenario
     

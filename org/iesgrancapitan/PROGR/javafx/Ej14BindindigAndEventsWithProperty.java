@@ -24,7 +24,7 @@ public class Ej14BindindigAndEventsWithProperty extends Application {
       System.out.println("Después: " + newValue);
       System.out.println("--------------------");
       if (newValue.isEmpty()) {
-        top.setText("¡No me borres!");
+        top.setText("¡QUE NO ME BORRES 🤬!");
       }
     });
     

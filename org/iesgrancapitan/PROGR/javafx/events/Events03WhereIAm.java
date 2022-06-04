@@ -14,7 +14,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Eventos03WhereIAm extends Application {
+public class Events03WhereIAm extends Application {
 
   private static final Font FONT_IN = new Font("Liberation Mono", 20);
   private static final Font FONT_OUT = new Font("Arial Black", 100);
